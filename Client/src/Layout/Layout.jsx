@@ -1,10 +1,17 @@
 import React from 'react';
 import Header from './header.jsx'; // Make sure the file name matches exactly
 import { Helmet } from "react-helmet";
+import { useTheme } from '../Context/ThemeProvider.jsx';
 
 const Layout = ({ children, title, description, keywords, author }) => {
+  const { activeTheme } = useTheme()
+
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-800 dark:bg-gray-900">
+    <div className="flex flex-col min-h-screen text-gray-800"
+    style={{
+      backgroundColor: activeTheme.colors.background,
+    }}
+    >
       <Helmet>
         <meta charSet='utf-8' />
         <meta name="description" content={description} />

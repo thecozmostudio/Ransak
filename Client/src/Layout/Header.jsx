@@ -53,7 +53,7 @@ const Header = () => {
             {/* mobile menu Items */}
             {
                 isMenuOpen && (
-                    <div className='md:hidden bg-white dark:bg-gray-900 border-t border-white dark:border-gray-900 py-4'>
+                    <div className='md:hidden border-t border-white dark:border-gray-900/80 py-4'>
                         <div className='container mx-auto px-4 space-y-4'>
                             {navLinks.map((link, index) => (
                                 <a key={index}

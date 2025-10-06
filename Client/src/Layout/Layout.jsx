@@ -21,7 +21,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
       </Helmet>
 
       <Header />
-      <main className="flex-1 px-4 sm:px-6 lg:px-8 pt-20 md:pt-24">
+      <main className="flex-1 ">
         {/* <Toaster /> */}
         {children}
       </main>

@@ -39,7 +39,7 @@ const Header = () => {
                     {
                         navLinks.map((link, index) => (
                             <a key={index} href={link.href} 
-                            onClick={() => setActiveLink(link.href)}
+                            onClick={() => navigate(link.href)}
                             className={`text-sm lg:text-xl font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 
                                 after:w-0 hover:after:w-full after:bg-teal-600 after:transition-all 
                                 ${ activeLink === link.href ? "text-teal-600 after:w-full": "text-gray-600 dark:text-teal-100 hover:text-gray-900 dark:hover:text-teal-600" }`}>
@@ -58,7 +58,7 @@ const Header = () => {
                             {navLinks.map((link, index) => (
                                 <a key={index}
                                 onClick={() => {
-                                    setActiveLink(link.href);
+                                    navigate(link.href);
                                     setMenuOpen(false);
                                 }}
                                 className={`block text-sm font-medium py-2 ${activeLink === link.href ? "text-teal-600" : "text-gray-600 hover:text-gray-900 dark:text-teal-100 dark:hover:text-teal-600"}`} href={link.href}>{link.lable}</a>

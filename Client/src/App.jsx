@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home.jsx';
 import { useTheme } from './Context/ThemeProvider.jsx';
 import Header from './Layout/header.jsx';
+import ContactUs from './Pages/ContactUs.jsx';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const { activeTheme } = useTheme()
@@ -20,8 +22,10 @@ function App() {
     >
         <main className='relative min-h-screen overflow-x-hidden'>
           <div className= 'overflow-hidden'>
+            <Toaster />
             <Header />
             <Home />
+            <ContactUs />
 
             {/* <Routes>
               <Route path='/' element={<Home/>} />

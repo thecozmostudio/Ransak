@@ -50,17 +50,16 @@ const Carousel = () => {
                   key={i}
                   src={img}
                   alt={`slide-${i}`}
-                  className={`absolute  object-cover transition-all duration-500 ${
-                    position === "center"
-                      ? "z-20 shadow-2xl"
-                      : "z-10 opacity-70"
-                  }`}
+                  className={`absolute  object-cover transition-all duration-500
+                    ${ position === "center" ? "z-20 shadow-2xl" : "z-10 opacity-70" }
+                    ${position === "center" ? "mt-40 md:mt-39" : "top-[25%]" }
+                    `}
                   //set image size
                   style={{
                     width: position === "center" ? "100%" : "40%",
                     height: position === "center" ? "100%" : "55%",
                     // Secondary images slightly lower than center
-                    top: position === "center" ? "7%" : "25%",
+                    // top: position === "center" ? "md:mt-20 mt-20" : "25%",
                     left:
                     //set position
                       position === "left"
@@ -78,7 +77,7 @@ const Carousel = () => {
                   initial={{ opacity: 0, y: 0, scale: 1 }}
                   animate={{
                     opacity: 1,
-                    y: 10,
+                    y: 0,
                     scale: position === "center" ? 1 : 1,
                   }}
                   exit={{ opacity: 0, y: 0, scale: 1 }}

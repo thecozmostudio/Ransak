@@ -11,9 +11,10 @@ const Header = () => {
 
     //headers navigation button link
     const navLinks = [
-        {href : "/", lable: "Home"},
-        {href : "/about", lable: "About Us"},
-        {href : "/Service", lable: "Our Service"}
+        {href : "#", lable: "Home"},
+        {href : "#about", lable: "About Us"},
+        {href : "#contactus", lable: "Contact us"},
+        {href : "#service", lable: "Our Service"}
     ]
 
   return (
